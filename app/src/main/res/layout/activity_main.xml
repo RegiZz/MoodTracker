@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:padding="16dp"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView android:text="Jak się dziś czujesz?" android:textSize="18sp"
+        android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+    <RadioGroup android:id="@+id/moodGroup"
+        android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RadioButton android:text="😊" android:id="@+id/happyBtn" android:layout_height="40dp" android:layout_width="50dp"/>
+        <RadioButton android:text="😐" android:id="@+id/neutralBtn" android:layout_height="40dp" android:layout_width="50dp"/>
+        <RadioButton android:text="😔" android:id="@+id/sadBtn" android:layout_height="40dp" android:layout_width="50dp"/>
+    </RadioGroup>
+
+    <EditText android:id="@+id/noteInput" android:hint="Notatka"
+        android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+    <Button android:id="@+id/saveButton" android:text="Zapisz"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+    <Button android:id="@+id/historyButton" android:text="Historia"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"/>
+</LinearLayout>
