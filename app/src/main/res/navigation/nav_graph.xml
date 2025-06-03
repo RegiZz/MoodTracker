@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/moodEntryFragment">
+
+    <fragment
+        android:id="@+id/moodEntryFragment"
+        android:name="task.moodtracker.fragments.MoodEntryFragment"
+        android:label="Dodaj wpis">
+        <action
+            android:id="@+id/action_moodEntryFragment_to_moodHistoryFragment"
+            app:destination="@id/moodHistoryFragment" />
+        <action
+            android:id="@+id/action_moodEntryFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_moodEntryFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/moodHistoryFragment"
+        android:name="task.moodtracker.fragments.MoodHistoryFragment"
+        android:label="Historia">
+        <action
+            android:id="@+id/action_moodHistoryFragment_to_moodDetailsFragment"
+            app:destination="@id/moodDetailsFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/moodDetailsFragment"
+        android:name="task.moodtracker.fragments.MoodDetailsFragment"
+        android:label="Szczegóły">
+        <argument
+            android:name="entryId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="task.moodtracker.fragments.SettingsFragment"
+        android:label="Ustawienia" />
+
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="task.moodtracker.fragments.InfoFragment"
+        android:label="Informacje" />
+</navigation>

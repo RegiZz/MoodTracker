@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">MoodTracker</string>
+    <string-array name="categories">
+        <item>Szkoła</item>
+        <item>Dom</item>
+        <item>Znajomi</item>
+        <item>Zdrowie</item>
+        <item>Inne</item>
+    </string-array>
+    <string-array name="mood_options">
+        <item>Wesoły</item>
+        <item>Przeciętny</item>
+        <item>Smutny</item>
+    </string-array>
 </resources>

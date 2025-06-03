@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Dodane przyciski do ustawień i historii -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginBottom="16dp">
+
+            <ImageButton
+                android:id="@+id/historyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_history"
+                android:contentDescription="Historia"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="8dp" />
+
+            <ImageButton
+                android:id="@+id/settingsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_settings"
+                android:contentDescription="Ustawienia"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="#808080"
+                android:padding="8dp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Reszta układu jak wcześniej -->
+        <EditText
+            android:id="@+id/noteEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Co się dziś wydarzyło?"
+            android:inputType="textMultiLine"
+            android:minLines="3" />
+
+        <RadioGroup
+            android:id="@+id/moodGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <RadioButton
+                android:id="@+id/moodHappy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wesoły" />
+
+            <RadioButton
+                android:id="@+id/moodNeutral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Przeciętny" />
+
+            <RadioButton
+                android:id="@+id/moodSad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Smutny" />
+        </RadioGroup>
+
+        <Spinner
+            android:id="@+id/categorySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
+        <CheckBox
+            android:id="@+id/sleptCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dzisiaj spałem dobrze"
+            android:layout_marginTop="16dp" />
+
+        <CheckBox
+            android:id="@+id/activeCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Byłem aktywny fizycznie"
+            android:layout_marginTop="8dp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="1"
+            android:layout_marginTop="16dp" />
+
+        <Switch
+            android:id="@+id/importantSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chcę zapisać ten dzień jako ważny"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Zapisz wpis"
+            android:layout_marginTop="24dp" />
+    </LinearLayout>
+</ScrollView>
